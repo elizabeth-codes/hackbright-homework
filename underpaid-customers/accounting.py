@@ -1,7 +1,7 @@
 def over_or_underpaid(file_name):
-   
-   the_file = open(file_name)
-   for line in the_file:
+
+    the_file = open(file_name)
+    for line in the_file:
         line = line.rstrip()
         tokens = line.split('|')
 
@@ -10,6 +10,8 @@ def over_or_underpaid(file_name):
         amount_paid = float(tokens[3])
 
         if quantity_ordered != amount_paid:
-            print(f"{customer_name} paid ${amount_paid:.2f},", f"expected ${quantity_ordered:.2f}")
+            print(f"{customer_name} paid ${amount_paid:.2f},",
+                  f"expected ${quantity_ordered:.2f}")
+
 
 over_or_underpaid("customer-orders.txt")
