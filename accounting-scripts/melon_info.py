@@ -23,7 +23,9 @@ from melons import melons
 
 
 def print_one_melon(melon, melon_attributes):
-    print(f"{melon}:{melon_attributes}")
+    print(f"{melon}")
+    for attribute, specific in melon_attributes.items():
+        print(f'{attribute}: {specific}')
 
 
 for melon, melon_attributes in melons.items():
