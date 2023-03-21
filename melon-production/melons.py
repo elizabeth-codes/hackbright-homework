@@ -36,3 +36,19 @@ class Squash(Melon):
     """Winter squash."""
 
     # FIX ME: Add Squash class definition here.
+    #
+    def prep(self):
+        super().prep()
+        robots.painterbot.paint(self)
+
+        # robots.cleanerbot.clean(self)
+        # robots.stickerbot.apply_logo(self)
+
+
+x = 5
+watermelon = Melon("watermelon")
+y = Squash("winter_sqush")
+# watermelon.__str__()
+# watermelon.prep()
+# print(watermelon)
+y.prep()
